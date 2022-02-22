@@ -1,0 +1,32 @@
+.working {
+  padding-bottom: 94px;
+  &__title {
+    margin-bottom: 50px;
+  }
+}
+.working-list {
+  display: flex;
+  &__item {
+    position: relative;
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  &__top-title {
+    @include flex-center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: var(--accent-text-color);
+    padding-top: 27px;
+    padding-bottom: 27px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
+}

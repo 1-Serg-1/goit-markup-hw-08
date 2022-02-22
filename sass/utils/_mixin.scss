@@ -1,0 +1,14 @@
+@mixin flex-center($align: center, $jus: center, $display: flex) {
+  align-items: $align;
+  justify-content: $jus;
+  display: $display;
+}
+@mixin transitions {
+  transition-property: color, background-color, box-shadow, border-color, transform, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@mixin margin-r-l($right: auto, $left: auto) {
+  margin-right: $right;
+  margin-left: $left;
+}

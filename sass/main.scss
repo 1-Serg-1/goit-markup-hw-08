@@ -1,0 +1,24 @@
+@import './utils/vars';
+@import './base/reset';
+@import './utils/mixin';
+@import './base/common';
+@import './utils/hidden';
+@import './utils/placeholder';
+
+@import './components/contanier';
+@import './components/logo';
+@import './components/buttons';
+@import './components/social-list';
+@import './components/modal';
+
+@import './components/header';
+
+@import './layout/studio/hero';
+@import './layout/studio/peculiarities';
+@import './layout/studio/working';
+@import './layout/studio/developers';
+@import './layout/studio/clients';
+
+@import './components/footer';
+
+@import './layout/portfolio/portfolio';
