@@ -1,7 +1,16 @@
 .contanier {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
+  // margin-left: auto;
+  // margin-right: auto;
+}
+.contanier__mob-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding-left: 40px;
+  padding-right: 10px;
 }

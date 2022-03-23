@@ -4,6 +4,9 @@ body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
 }
+body.modal-open {
+  overflow: hidden;
+}
 a {
   color: var(--primary-text-color);
   text-decoration: none;
@@ -28,12 +31,9 @@ p {
 
 .title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
+  // font-size: 36px;
   line-height: 1.17;
   text-align: center;
 }
-// .transitions {
-//   transition-property: color, background-color, box-shadow, border-color, transform, fill;
-//   transition-duration: 250ms;
-//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-// }
+
