@@ -4,14 +4,16 @@
   padding-bottom: 60px;
   @include margin-r-l;
   text-align: center;
-  // padding-top: 40px;
-  // padding-bottom: 40px;
-  @include mobile {
-    width: 480px;
-  }
 
-  @include tablet {
-    width: 768px;
+  @include desk {
+    text-align: start;
+  }
+}
+.footer-thumb {
+  @include desk {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
   }
 }
 .footer-content {
@@ -19,26 +21,34 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  // align-items: baseline;
 
   @include tablet {
     flex-direction: row;
     align-items: flex-start;
   }
+
+  @include desk {
+    text-align: start;
+    align-items: baseline;
+  }
 }
 .footer--content {
-  @include tablet {
+  @include tablet-span {
     margin-bottom: 60px;
   }
 }
 .footer-content__address {
   margin-bottom: 60px;
-  // margin-right: 70px;
 
   @include tablet {
     padding-left: 61px;
     margin-right: 165px;
     margin-bottom: 0;
+  }
+
+  @include desk {
+    padding-left: 0;
+    margin-right: 70px;
   }
 }
 .footer-content__logo {
@@ -55,7 +65,10 @@
 }
 .address-list__item:not(:last-child) {
   margin-bottom: 8px;
-  // margin-bottom: 9px;
+
+  @include desk {
+    margin-bottom: 9px;
+  }
 }
 .address-list__map {
   color: var(--addresse-text-color);
@@ -66,7 +79,6 @@
 .footer__social {
   min-width: 206px;
   margin-bottom: 60px;
-  // margin-right: 93px;
 
   @include tablet {
     margin-bottom: 0;
@@ -82,9 +94,7 @@
   margin-bottom: 20px;
 }
 .footer-form {
-  width: 100%;
-
-  @include tablet {
+  @include tablet-span {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,11 +131,15 @@
   &:focus:placeholder-shown {
     border: 1px solid var(--accent-color);
   }
-  // width: 358px;
-  // margin-right: 12px;
 
   @include tablet {
     width: 450px;
+  }
+
+  @include desk {
+    width: 358px;
+    margin-right: 11px;
+    margin-bottom: 0;
   }
 }
 .footer-form__icon {

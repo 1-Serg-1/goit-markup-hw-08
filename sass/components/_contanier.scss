@@ -10,7 +10,10 @@
 
   @include tablet {
     width: 768px;
-    @include margin-r-l;
+  }
+
+  @include desk {
+    width: 1200px;
   }
 }
 .contanier__mob-menu {
@@ -21,4 +24,8 @@
   height: 100%;
   padding-left: 40px;
   padding-right: 10px;
+
+  @include tablet {
+    display: none;
+  }
 }

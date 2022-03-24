@@ -8,18 +8,24 @@
     padding-top: 16px;
     padding-bottom: 16px;
   }
-  // padding-top: 24px;
-  // padding-bottom: 24px;
+
+  @include desk {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }
 .header-content {
   @include flex-center(center, space-between, flex);
-  // .header-content {
+
+  @include desk {
+    @include flex-center(center, flex-start, flex);
+  }
 }
-// .navigation {
-// }
-// .header__logo {
-//   //   margin-right: 93px;
-// }
+.header__logo {
+  @include desk {
+    margin-right: 93px;
+  }
+}
 .logo--black {
   color: var(--logo-black);
 }
@@ -43,9 +49,6 @@
     }
   }
 }
-// .header__contacts {
-//   // margin-left: auto;
-// }
 .header-contacts {
   @include tablet {
     display: flex;
@@ -53,12 +56,20 @@
     align-items: flex-start;
     font-size: 12px;
     line-height: 1.17;
-    // &__item {
-    //   // align-items: center;
-    //   // &:not(:last-child) {
-    //   //   margin-right: 50px;
-    //   // }
-    // }
+
+    @include desk {
+      flex-direction: row;
+    }
+    &__item {
+      @include desk {
+        font-size: 14px;
+        line-height: 1.14;
+        align-items: center;
+        &:not(:last-child) {
+          margin-right: 50px;
+        }
+      }
+    }
     &__contact {
       color: var(--secondary-text-color);
       @include flex-center(center, null);
@@ -67,6 +78,11 @@
       margin-right: 10px;
       fill: currentColor;
     }
+  }
+}
+.header__contacts {
+  @include desk {
+    margin-left: auto;
   }
 }
 .current {
@@ -81,6 +97,10 @@
     background-color: var(--accent-color);
     border-radius: 2px;
     cursor: auto;
+
+    @include desk {
+      top: 45px;
+    }
   }
 }
 .mob-menu {

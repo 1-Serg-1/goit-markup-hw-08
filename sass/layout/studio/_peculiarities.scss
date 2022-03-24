@@ -1,8 +1,11 @@
 .peculiarities {
   padding-top: 60px;
   padding-bottom: 60px;
-  // padding-top: 94px;
-  // padding-bottom: 94px;
+
+  @include desk {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .peculiarities-list {
@@ -11,11 +14,13 @@
     flex-wrap: wrap;
   }
   &__item {
-    &:not(:last-child) {
-      margin-bottom: 30px;
+    @media screen and (max-width: 1199px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
 
-    @include tablet {
+    @include tablet-span {
       width: calc((100% - 30px) / 2);
       margin-right: 30px;
       &:nth-child(2n) {
@@ -25,11 +30,14 @@
         margin-bottom: 0px;
       }
     }
-    // width: calc((100% - 90px) / 4);
-    // margin-right: 30px;
-    // &:nth-child(4n) {
-    //   margin-right: 0;
-    // }
+
+    @include desk {
+      width: calc((100% - 90px) / 4);
+      margin-right: 30px;
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
   }
   &__icon {
     @include flex-center(null);

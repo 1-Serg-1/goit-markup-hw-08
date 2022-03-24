@@ -4,6 +4,10 @@
   &__title {
     margin-bottom: 50px;
   }
+
+  @include desk {
+    display: inline;
+  }
 }
 .working-list {
   display: flex;

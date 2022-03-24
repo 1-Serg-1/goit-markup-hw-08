@@ -23,8 +23,6 @@
   border-radius: 4px;
   transition: transform 700ms;
   padding: 40px;
-  // min-width: 528px;
-  // min-height: 581px;
 
   @include mobile {
     top: 50%;
@@ -32,6 +30,11 @@
     transform: translate(-50%, -50%);
     width: 450px;
     height: 609px;
+  }
+
+  @include desk {
+    min-width: 528px;
+    min-height: 581px;
   }
 }
 .form-modal {

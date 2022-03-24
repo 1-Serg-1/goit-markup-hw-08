@@ -12,16 +12,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--hero-text-color);
-  // padding-top: 200px;
-  // padding-bottom: 200px;
-  // max-width: 1600px;
-  // &--margin-auto {
-  //   @include margin-r-l;
-  // }
+  &--margin-auto {
+    @include mobile {
+      @include margin-r-l;
+    }
+  }
 
   @include mobile {
     width: 480px;
-    @include margin-r-l;
   }
 
   @include tablet {
@@ -31,6 +29,19 @@
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url(../images/hero-bg-tab@2x.jpg);
+    }
+  }
+
+  @include desk {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    width: auto;
+    max-width: 1600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(/images/hero-bg.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg@2x.jpg);
     }
   }
 }
@@ -43,7 +54,10 @@
   line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  // width: 696px;
-  // font-size: 44px;
-  // line-height: 1.36;
+
+  @include desk {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
