@@ -20,10 +20,10 @@
   <body>
     <header class="header">
       <div class="contanier header-content">
+        <a href="./index.html" class="logo header__logo" lang="en"
+          >Web<span class="logo--black">Studio</span>
+        </a>
         <nav class="navigation">
-          <a href="./index.html" class="logo header__logo" lang="en"
-            >Web<span class="logo--black">Studio</span>
-          </a>
           <ul class="nav-list list">
             <li class="nav-list__item">
               <a href="./index.html" class="nav-list__link link current">Студия</a>
@@ -495,7 +495,8 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer-content contanier">
+      <div class="contanier">
+      <div class="footer-content footer--content">
         <div class="footer-content__address">
           <a href="./index.html" class="logo footer-content__logo" lang="en"
             >Web<span class="logo--white">Studio</span>
@@ -559,21 +560,18 @@
             </li>
           </ul>
         </div>
-        <form class="footer-form" autocomplete="off">
-          <b class="footer-form__text">Подпишитесь на рассылку</b>
-          <input
-            type="email"
-            name="email"
-            placeholder="E-mail"
-            class="footer-form__input form-reset-input"
-          />
-          <button type="submit" class="footer-form__btn button">
-            <svg width="24" height="24" class="footer-form__icon">
-              <use href="./images/icons.svg#icon-send"></use>
-            </svg>
-            Подписаться
-          </button>
-        </form>
+        
+      </div>
+      <form class="footer-form" autocomplete="off">
+        <b class="footer-form__text">Подпишитесь на рассылку</b>
+        <input type="email" name="email" placeholder="E-mail" class="footer-form__input form-reset-input" />
+        <button type="submit" class="footer-form__btn button">
+          <svg width="24" height="24" class="footer-form__icon">
+            <use href="./images/icons.svg#icon-send"></use>
+          </svg>
+          Подписаться
+        </button>
+      </form>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>

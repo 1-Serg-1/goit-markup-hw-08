@@ -6,10 +6,24 @@
 }
 
 .peculiarities-list {
-  // display: flex;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
   &__item {
     &:not(:last-child) {
       margin-bottom: 30px;
+    }
+
+    @include tablet {
+      width: calc((100% - 30px) / 2);
+      margin-right: 30px;
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 0px;
+      }
     }
     // width: calc((100% - 90px) / 4);
     // margin-right: 30px;
@@ -33,6 +47,10 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+
+    @include tablet {
+      text-align: start;
+    }
   }
   &__text {
     font-size: 14px;

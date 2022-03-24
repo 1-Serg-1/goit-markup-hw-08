@@ -10,7 +10,10 @@
   // margin-bottom: 50px;
 }
 .developers-list {
-  // display: flex;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
   &__item {
     // width: calc((100% - 90px) / 4);
     // margin-right: 30px;
@@ -23,6 +26,17 @@
     border-bottom-left-radius: 4px;
     &:not(:last-child) {
       margin-bottom: 30px;
+    }
+
+    @include tablet {
+      width: calc((100% - 30px) / 2);
+      margin-right: 30px;
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 0px;
+      }
     }
     // &:nth-child(4n) {
     //   margin-right: 0;

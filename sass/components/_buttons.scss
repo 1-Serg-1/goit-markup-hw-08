@@ -28,6 +28,10 @@
   &:focus {
     fill: var(--accent-color);
   }
+
+  @include tablet {
+    display: none;
+  }
 }
 .mob-menu-close {
   position: absolute;
