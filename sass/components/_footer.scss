@@ -24,7 +24,8 @@
 
   @include tablet {
     flex-direction: row;
-    align-items: flex-start;
+    justify-content: space-around;
+    align-items: baseline;
   }
 
   @include desk {
@@ -33,7 +34,7 @@
   }
 }
 .footer--content {
-  @include tablet-span {
+  @media screen and (max-width: 1199px) {
     margin-bottom: 60px;
   }
 }
@@ -41,8 +42,6 @@
   margin-bottom: 60px;
 
   @include tablet {
-    padding-left: 61px;
-    margin-right: 165px;
     margin-bottom: 0;
   }
 
@@ -75,14 +74,6 @@
 }
 .address-list__contact {
   color: var(--footer-text-color);
-}
-.footer__social {
-  min-width: 206px;
-  margin-bottom: 60px;
-
-  @include tablet {
-    margin-bottom: 0;
-  }
 }
 .footer-social__title {
   font-weight: 700;
